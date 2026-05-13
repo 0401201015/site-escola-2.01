@@ -3,71 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jornal Estudantil | Voz da Escola</title>
+    <title>Escola Rosa - Portal do Aluno</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
-    <header>
-        <div class="header-top">
-            <span>Brasil, 06 de Maio de 2026</span>
-            <span>Edição Semanal</span>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="https://via.placeholder.com/50/FFB6C1/FFFFFF?text=L" alt="Logo Escola">
+            <span>Escola de Talentos</span>
         </div>
-        <h1>O ECO ESTUDANTIL</h1>
-        <p class="tagline">A voz e a inteligência da nossa comunidade escolar</p>
-    </header>
-
-    <nav>
-        <ul>
-            <li><a href="#">Início</a></li>
-            <li><a href="#">Eventos</a></li>
-            <li><a href="#">Esportes</a></li>
-            <li><a href="#">Entrevistas</a></li>
-            <li><a href="#">Opinião</a></li>
+        <ul class="nav-links">
+            <li><a href="#home">Início</a></li>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#calendario">Calendário</a></li>
+            <li><a href="#destaques">Destaques</a></li>
+            <li id="user-display"></li>
         </ul>
+        <button id="loginBtn" class="btn-rosa">Acessar Conta</button>
     </nav>
 
-    <main class="container">
-        <section class="main-news">
-            <article>
-                <img src="https://via.placeholder.com/800x400" alt="Destaque">
-                <h2>Feira de Ciências 2026: Projetos Sustentáveis Surpreendem</h2>
-                <p>Alunos do ensino médio apresentaram soluções inovadoras para o reaproveitamento de água da chuva no campus...</p>
-                <a href="#" class="read-more">Ler mais →</a>
-            </article>
-        </section>
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Bem-vindo ao Futuro</h1>
+            <p>Educação com carinho, tecnologia e excelência.</p>
+        </div>
+        <img src="https://via.placeholder.com/600x400/FFD1DC/FFFFFF?text=Foto+da+Escola" alt="Foto da Escola" class="img-escola">
+    </section>
 
-        <aside class="sidebar">
-            <h3>Mais Lidas</h3>
-            <div class="sidebar-item">
-                <h4>Interclasse começa na próxima segunda</h4>
-                <p>Prepare sua torcida! Os jogos de futsal e vôlei...</p>
-            </div>
-            <div class="sidebar-item">
-                <h4>Cardápio do Mês</h4>
-                <p>Confira as opções saudáveis do refeitório para maio.</p>
-            </div>
-        </aside>
+    <section id="sobre" class="section">
+        <h2>Nossa História</h2>
+        <div class="text-container">
+            <p>Fundada com o propósito de transformar vidas através do conhecimento, nossa escola é referência em ensino humanizado. Localizada em um ambiente acolhedor, utilizamos metodologias modernas para garantir que cada aluno desenvolva seu potencial máximo. Nossa infraestrutura conta com laboratórios de última geração, bibliotecas completas e espaços de convivência pensados no bem-estar.</p>
+        </div>
+    </section>
 
-        <section class="news-grid">
-            <article class="grid-item">
-                <h3>Clube de Xadrez</h3>
-                <p>As inscrições para o torneio de inverno estão abertas até sexta.</p>
-            </article>
-            <article class="grid-item">
-                <h3>Dicas de Estudo</h3>
-                <p>Como organizar seu cronograma para as provas bimestrais.</p>
-            </article>
-            <article class="grid-item">
-                <h3>Arte no Pátio</h3>
-                <p>Exposição de grafite dos alunos do 9º ano decora os muros.</p>
-            </article>
-        </section>
-    </main>
+    <section id="calendario" class="section">
+        <h2>Calendário Acadêmico</h2>
+        <div class="calendar-container">
+            <div class="calendar-header">
+                <h3>Maio 2026</h3>
+            </div>
+            <div class="calendar-grid" id="calendarGrid">
+                </div>
+        </div>
+    </section>
+
+    <section id="destaques" class="section bg-rosa-suave">
+        <h2>Alunos de Destaque</h2>
+        <div class="cards-container">
+            <div class="card">
+                <img src="https://i.pravatar.cc/100?img=1" alt="Aluno">
+                <h3>Ana Silva</h3>
+                <p>Medalha de Ouro na Olimpíada de Matemática.</p>
+            </div>
+            <div class="card">
+                <img src="https://i.pravatar.cc/100?img=12" alt="Aluno">
+                <h3>Bruno Costa</h3>
+                <p>Destaque em Projetos de Sustentabilidade.</p>
+            </div>
+            <div class="card">
+                <img src="https://i.pravatar.cc/100?img=5" alt="Aluno">
+                <h3>Carla Souza</h3>
+                <p>Melhor desempenho em Redação 2025.</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="bot-container" id="botContainer">
+        <div class="bot-header">Assistente Virtual 🤖</div>
+        <div class="bot-messages" id="botMessages">
+            <p class="bot-text">Olá! Como posso te ajudar hoje?</p>
+        </div>
+        <div class="bot-input">
+            <input type="text" id="userInput" placeholder="Digite sua dúvida...">
+            <button onclick="sendMessage()">Enviar</button>
+        </div>
+    </div>
+
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <h3>Login do Aluno</h3>
+            <input type="text" id="username" placeholder="Nome de usuário">
+            <input type="password" id="password" placeholder="Senha">
+            <button onclick="handleLogin()" class="btn-rosa">Entrar</button>
+            <button onclick="closeModal()" class="btn-link">Cancelar</button>
+        </div>
+    </div>
 
     <footer>
-        <p>&copy; 2026 Jornal O Eco Estudantil - Produzido pela Turma de Tecnologia</p>
+        <p>&copy; 2026 Escola de Talentos - Todos os direitos reservados.</p>
     </footer>
 
+    <script src="script.js"></script>
 </body>
 </html>
