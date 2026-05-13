@@ -3,99 +3,128 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Escola Rosa - Portal do Aluno</title>
+    <title>Portal Educacional | Excelência em Ensino</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <nav class="navbar">
-        <div class="logo">
-            <img src="https://via.placeholder.com/50/FFB6C1/FFFFFF?text=L" alt="Logo Escola">
-            <span>Escola de Talentos</span>
-        </div>
-        <ul class="nav-links">
-            <li><a href="#home">Início</a></li>
-            <li><a href="#sobre">Sobre</a></li>
-            <li><a href="#calendario">Calendário</a></li>
-            <li><a href="#destaques">Destaques</a></li>
-            <li id="user-display"></li>
-        </ul>
-        <button id="loginBtn" class="btn-rosa">Acessar Conta</button>
-    </nav>
-
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>Bem-vindo ao Futuro</h1>
-            <p>Educação com carinho, tecnologia e excelência.</p>
-        </div>
-        <img src="https://via.placeholder.com/600x400/FFD1DC/FFFFFF?text=Foto+da+Escola" alt="Foto da Escola" class="img-escola">
-    </section>
-
-    <section id="sobre" class="section">
-        <h2>Nossa História</h2>
-        <div class="text-container">
-            <p>Fundada com o propósito de transformar vidas através do conhecimento, nossa escola é referência em ensino humanizado. Localizada em um ambiente acolhedor, utilizamos metodologias modernas para garantir que cada aluno desenvolva seu potencial máximo. Nossa infraestrutura conta com laboratórios de última geração, bibliotecas completas e espaços de convivência pensados no bem-estar.</p>
-        </div>
-    </section>
-
-    <section id="calendario" class="section">
-        <h2>Calendário Acadêmico</h2>
-        <div class="calendar-container">
-            <div class="calendar-header">
-                <h3>Maio 2026</h3>
+    <header class="main-header">
+        <nav class="container">
+            <div class="logo">
+                <div class="logo-icon"></div>
+                <span>INSTITUTO<b>SABER</b></span>
             </div>
-            <div class="calendar-grid" id="calendarGrid">
+            <ul class="nav-menu">
+                <li><a href="#sobre">Sobre Nós</a></li>
+                <li><a href="#calendario">Calendário</a></li>
+                <li><a href="#destaques">Alunos</a></li>
+                <li id="user-area">
+                    <button class="btn-login" onclick="toggleModal()">Área do Aluno</button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-premium">
+            <div class="container hero-grid">
+                <div class="hero-text">
+                    <span class="badge">Matrículas Abertas 2026</span>
+                    <h1>Construindo o amanhã com <b>conhecimento</b>.</h1>
+                    <p>Uma infraestrutura completa aliada a um corpo docente de elite para preparar você para os desafios do mundo globalizado.</p>
+                    <div class="hero-actions">
+                        <a href="#calendario" class="btn-primary">Ver Calendário</a>
+                        <a href="#sobre" class="btn-secondary">Conheça a Escola</a>
+                    </div>
                 </div>
-        </div>
-    </section>
+                <div class="hero-image">
+                    <img src="https://images.unsplash.com/photo-1523050853064-dbad35009711?auto=format&fit=crop&w=800&q=80" alt="Fachada da Escola">
+                </div>
+            </div>
+        </section>
 
-    <section id="destaques" class="section bg-rosa-suave">
-        <h2>Alunos de Destaque</h2>
-        <div class="cards-container">
-            <div class="card">
-                <img src="https://i.pravatar.cc/100?img=1" alt="Aluno">
-                <h3>Ana Silva</h3>
-                <p>Medalha de Ouro na Olimpíada de Matemática.</p>
+        <section id="sobre" class="container section-padding">
+            <div class="section-header">
+                <h2>Nossa Instituição</h2>
+                <p>Referência acadêmica com mais de 25 anos de história.</p>
             </div>
-            <div class="card">
-                <img src="https://i.pravatar.cc/100?img=12" alt="Aluno">
-                <h3>Bruno Costa</h3>
-                <p>Destaque em Projetos de Sustentabilidade.</p>
+            <div class="about-grid">
+                <div class="about-card">
+                    <h3>Missão</h3>
+                    <p>Desenvolver habilidades técnicas e socioemocionais em um ambiente inovador.</p>
+                </div>
+                <div class="about-card">
+                    <h3>Visão</h3>
+                    <p>Ser a ponte entre o potencial do aluno e as melhores universidades do país.</p>
+                </div>
+                <div class="about-card">
+                    <h3>Valores</h3>
+                    <p>Ética, transparência e compromisso com a evolução contínua.</p>
+                </div>
             </div>
-            <div class="card">
-                <img src="https://i.pravatar.cc/100?img=5" alt="Aluno">
-                <h3>Carla Souza</h3>
-                <p>Melhor desempenho em Redação 2025.</p>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <div class="bot-container" id="botContainer">
-        <div class="bot-header">Assistente Virtual 🤖</div>
-        <div class="bot-messages" id="botMessages">
-            <p class="bot-text">Olá! Como posso te ajudar hoje?</p>
+        <section id="calendario" class="bg-light section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Cronograma Acadêmico</h2>
+                </div>
+                <div class="calendar-wrapper">
+                    <div class="calendar-controls">
+                        <button>&lt;</button>
+                        <span>Maio 2026</span>
+                        <button>&gt;</button>
+                    </div>
+                    <div class="calendar-grid" id="calendarGrid"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="destaques" class="container section-padding">
+            <div class="section-header">
+                <h2>Alunos em Evidência</h2>
+            </div>
+            <div class="students-grid">
+                <div class="student-card">
+                    <div class="student-img"></div>
+                    <div class="student-info">
+                        <h4>Gabriel Mendes</h4>
+                        <span>1º Lugar - Engenharia</span>
+                    </div>
+                </div>
+                <div class="student-card">
+                    <div class="student-img"></div>
+                    <div class="student-info">
+                        <h4>Mariana Rocha</h4>
+                        <span>Destaque em Robótica</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="chat-widget" id="chatWidget">
+        <div class="chat-header">Suporte Acadêmico</div>
+        <div class="chat-body" id="chatBody">
+            <p class="bot-msg">Olá! Como posso ajudar você hoje?</p>
         </div>
-        <div class="bot-input">
-            <input type="text" id="userInput" placeholder="Digite sua dúvida...">
-            <button onclick="sendMessage()">Enviar</button>
+        <div class="chat-footer">
+            <input type="text" id="chatInput" placeholder="Sua dúvida...">
+            <button onclick="askBot()">➤</button>
         </div>
     </div>
 
-    <div id="loginModal" class="modal">
-        <div class="modal-content">
-            <h3>Login do Aluno</h3>
-            <input type="text" id="username" placeholder="Nome de usuário">
-            <input type="password" id="password" placeholder="Senha">
-            <button onclick="handleLogin()" class="btn-rosa">Entrar</button>
-            <button onclick="closeModal()" class="btn-link">Cancelar</button>
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal-box">
+            <h3>Acesso Restrito</h3>
+            <p>Insira suas credenciais de estudante.</p>
+            <input type="text" id="userIn" placeholder="RA ou E-mail">
+            <input type="password" id="passIn" placeholder="Senha">
+            <button class="btn-primary" style="width: 100%;" onclick="doLogin()">Entrar no Portal</button>
+            <button class="btn-close" onclick="toggleModal()">Fechar</button>
         </div>
     </div>
-
-    <footer>
-        <p>&copy; 2026 Escola de Talentos - Todos os direitos reservados.</p>
-    </footer>
 
     <script src="script.js"></script>
 </body>
