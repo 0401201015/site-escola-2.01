@@ -3,129 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portal Educacional | Excelência em Ensino</title>
+    <title>Escola Horizonte | Educação para o Futuro</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <header class="main-header">
+    <header>
         <nav class="container">
-            <div class="logo">
-                <div class="logo-icon"></div>
-                <span>INSTITUTO<b>SABER</b></span>
-            </div>
-            <ul class="nav-menu">
-                <li><a href="#sobre">Sobre Nós</a></li>
-                <li><a href="#calendario">Calendário</a></li>
-                <li><a href="#destaques">Alunos</a></li>
-                <li id="user-area">
-                    <button class="btn-login" onclick="toggleModal()">Área do Aluno</button>
-                </li>
+            <div class="logo">Escola <span>Horizonte</span></div>
+            <ul>
+                <li><a href="#home">Início</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#cursos">Cursos</a></li>
+                <li><a href="#contato">Contato</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
-        <section class="hero-premium">
-            <div class="container hero-grid">
-                <div class="hero-text">
-                    <span class="badge">Matrículas Abertas 2026</span>
-                    <h1>Construindo o amanhã com <b>conhecimento</b>.</h1>
-                    <p>Uma infraestrutura completa aliada a um corpo docente de elite para preparar você para os desafios do mundo globalizado.</p>
-                    <div class="hero-actions">
-                        <a href="#calendario" class="btn-primary">Ver Calendário</a>
-                        <a href="#sobre" class="btn-secondary">Conheça a Escola</a>
-                    </div>
-                </div>
-                <div class="hero-image">
-                    <img src="https://images.unsplash.com/photo-1523050853064-dbad35009711?auto=format&fit=crop&w=800&q=80" alt="Fachada da Escola">
-                </div>
-            </div>
-        </section>
-
-        <section id="sobre" class="container section-padding">
-            <div class="section-header">
-                <h2>Nossa Instituição</h2>
-                <p>Referência acadêmica com mais de 25 anos de história.</p>
-            </div>
-            <div class="about-grid">
-                <div class="about-card">
-                    <h3>Missão</h3>
-                    <p>Desenvolver habilidades técnicas e socioemocionais em um ambiente inovador.</p>
-                </div>
-                <div class="about-card">
-                    <h3>Visão</h3>
-                    <p>Ser a ponte entre o potencial do aluno e as melhores universidades do país.</p>
-                </div>
-                <div class="about-card">
-                    <h3>Valores</h3>
-                    <p>Ética, transparência e compromisso com a evolução contínua.</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="calendario" class="bg-light section-padding">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Cronograma Acadêmico</h2>
-                </div>
-                <div class="calendar-wrapper">
-                    <div class="calendar-controls">
-                        <button>&lt;</button>
-                        <span>Maio 2026</span>
-                        <button>&gt;</button>
-                    </div>
-                    <div class="calendar-grid" id="calendarGrid"></div>
-                </div>
-            </div>
-        </section>
-
-        <section id="destaques" class="container section-padding">
-            <div class="section-header">
-                <h2>Alunos em Evidência</h2>
-            </div>
-            <div class="students-grid">
-                <div class="student-card">
-                    <div class="student-img"></div>
-                    <div class="student-info">
-                        <h4>Gabriel Mendes</h4>
-                        <span>1º Lugar - Engenharia</span>
-                    </div>
-                </div>
-                <div class="student-card">
-                    <div class="student-img"></div>
-                    <div class="student-info">
-                        <h4>Mariana Rocha</h4>
-                        <span>Destaque em Robótica</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <div class="chat-widget" id="chatWidget">
-        <div class="chat-header">Suporte Acadêmico</div>
-        <div class="chat-body" id="chatBody">
-            <p class="bot-msg">Olá! Como posso ajudar você hoje?</p>
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Educação que Transforma</h1>
+            <p>Preparando mentes brilhantes para os desafios do amanhã.</p>
+            <a href="#cursos" class="btn">Conheça nossos cursos</a>
         </div>
-        <div class="chat-footer">
-            <input type="text" id="chatInput" placeholder="Sua dúvida...">
-            <button onclick="askBot()">➤</button>
-        </div>
-    </div>
+    </section>
 
-    <div class="modal-overlay" id="modalOverlay">
-        <div class="modal-box">
-            <h3>Acesso Restrito</h3>
-            <p>Insira suas credenciais de estudante.</p>
-            <input type="text" id="userIn" placeholder="RA ou E-mail">
-            <input type="password" id="passIn" placeholder="Senha">
-            <button class="btn-primary" style="width: 100%;" onclick="doLogin()">Entrar no Portal</button>
-            <button class="btn-close" onclick="toggleModal()">Fechar</button>
-        </div>
-    </div>
+    <section id="sobre" class="container section">
+        <h2>Sobre Nós</h2>
+        <p>Com mais de 20 anos de tradição, a Escola Horizonte foca no desenvolvimento integral do aluno, unindo tecnologia e humanismo.</p>
+    </section>
 
-    <script src="script.js"></script>
+    <section id="cursos" class="container section">
+        <h2>Nossos Níveis</h2>
+        <div class="cards">
+            <div class="card">
+                <h3>Ensino Fundamental</h3>
+                <p>Base sólida e estimulante para os primeiros anos de descoberta.</p>
+            </div>
+            <div class="card">
+                <h3>Ensino Médio</h3>
+                <p>Foco em excelência acadêmica e preparação para o vestibular.</p>
+            </div>
+            <div class="card">
+                <h3>Atividades Extra</h3>
+                <p>Robótica, esportes e artes para expandir horizontes.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Escola Horizonte - Todos os direitos reservados.</p>
+    </footer>
+
 </body>
 </html>
